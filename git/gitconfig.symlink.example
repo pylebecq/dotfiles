@@ -1,0 +1,50 @@
+[user]
+    email           = %AUTHOR_EMAIL%
+    name            = %AUTHOR_NAME%
+[credentials]
+    helper          = %GIT_CREDENTIALS_HELPER%
+[alias]
+    amend           = commit --amend -C HEAD
+    br              = branch -v
+    bra             = branch -v -a
+    cat             = cat-file -p
+    ci              = commit -v
+    cia             = commit --amend -C HEAD
+    cim             = commit -m '--'
+    co              = checkout
+    count           = shortlog -sn
+    d               = diff
+    ds              = diff --staged
+    last            = log -1 HEAD
+    lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+    lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
+    logfull         = log --pretty=fuller --graph --stat -p
+    rebc            = rebase --continue
+    rebs            = rebase --skip
+    rebt            = rebase --abort
+    st              = status
+    standup         = log --since '1 day ago' --oneline --author %AUTHOR_EMAIL%
+    uncommit        = reset --soft HEAD^
+    uncommithard    = reset --hard HEAD^
+    unstage         = reset HEAD
+[branch]
+    autosetupmerge  = true
+    autosetuprebase = always
+[color]
+    ui              = always
+[color "branch"]
+    current         = yellow bold
+    local           = yellow
+[color "diff"]
+    meta            = yellow bold
+[color "status"]
+    untracked       = cyan
+[core]
+    autocrlf        = input
+    excludesfile    = ~/.gitignore
+[push]
+    default         = simple
+[rerere]
+    enabled         = 1
+[help]
+    autocorrect     = 1
