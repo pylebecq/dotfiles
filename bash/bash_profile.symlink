@@ -25,4 +25,4 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Path
-export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:~/bin:~/.composer/vendor/bin
