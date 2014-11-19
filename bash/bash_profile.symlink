@@ -10,6 +10,16 @@ fi
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Load PHPBrew
+if [ -f "$HOME/.phpbrew/bashrc" ]; then
+	source "$HOME/.phpbrew/bashrc"
+fi
+
+# Load PyEnv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Load PyEnv VirtualEnv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 # init z! (https://github.com/rupa/z)
 if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
 	. $(brew --prefix)/etc/profile.d/z.sh
@@ -25,4 +35,4 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Path
-export PATH=$PATH:~/bin:~/.composer/vendor/bin:~/.dotfiles/bin
+export PATH=/usr/local/bin:~/bin:~/.composer/vendor/bin:~/.dotfiles/bin:$HOME/.rvm/bin:$PATH
