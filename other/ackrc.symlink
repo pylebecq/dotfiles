@@ -1,5 +1,8 @@
 --type-set
 twig=.twig
 
+--type-set
+yml=.yml
+
 --pager
 less -r
