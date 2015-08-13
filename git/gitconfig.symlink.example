@@ -15,13 +15,20 @@
     count           = shortlog -sn
     d               = diff
     ds              = diff --staged
+    fix             = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
+    fixup           = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
     last            = log -1 HEAD
     lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
     lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
     logfull         = log --pretty=fuller --graph --stat -p
+    reba            = rebase --autosquash
     rebc            = rebase --continue
+    rebi            = rebase --interactive --autosquash
     rebs            = rebase --skip
     rebt            = rebase --abort
+    ri              = rebase --interactive --autosquash
+    sq              = "!bash -c 'if [[ $1 ]]; then git ci --squash=$1; else git ci --squash=HEAD; fi;' -"
+    squash          = "!bash -c 'if [[ $1 ]]; then git ci --squash=$1; else git ci --squash=HEAD; fi;' -"
     st              = status
     standup         = log --since '1 day ago' --oneline --author %AUTHOR_EMAIL%
     uncommit        = reset --soft HEAD^
