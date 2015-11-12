@@ -53,7 +53,7 @@ plugins=(git symfony2 composer)
 
 # User configuration
 
-export PATH="/usr/local/bin:/Users/pierreyves/bin:/Users/pierreyves/.composer/vendor/bin:/Users/pierreyves/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/Users/`whoami`/bin:/Users/`whoami`/.composer/vendor/bin:/Users/`whoami`/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
