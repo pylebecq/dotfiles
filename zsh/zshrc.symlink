@@ -105,3 +105,8 @@ fi
 
 # Default user for agnoster theme
 export DEFAULT_USER=`whoami`
+
+# Execute local zshrc file with computer specific configuration
+if [[ -f "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
