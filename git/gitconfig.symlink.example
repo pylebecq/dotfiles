@@ -22,6 +22,7 @@
     lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
     logfull         = log --pretty=fuller --graph --stat -p
     purr            = pull --rebase
+    pushf           = push --force-with-lease
     reba            = rebase --autosquash
     rebc            = rebase --continue
     rebi            = rebase --interactive --autosquash
@@ -32,6 +33,7 @@
     squash          = "!bash -c 'if [[ $1 ]]; then git ci --squash=$1; else git ci --squash=HEAD; fi;' -"
     st              = status
     standup         = log --since '1 day ago' --oneline --author %AUTHOR_EMAIL%
+    undo            = reset --soft HEAD^
     uncommit        = reset --soft HEAD^
     uncommithard    = reset --hard HEAD^
     unstage         = reset HEAD
