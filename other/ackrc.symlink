@@ -5,4 +5,4 @@ twig=.twig
 yml=.yml
 
 --pager
-less -r
+less -FRSX
