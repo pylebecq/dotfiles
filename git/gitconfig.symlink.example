@@ -46,7 +46,8 @@
     pager           = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less -FRSX
     whitespace      = space-before-tab,blank-at-eol,tab-in-indent
 [push]
-    default         = simple
+    default           = simple
+    recurseSubmodules = check
 [rerere]
     enabled         = 1
 [help]
