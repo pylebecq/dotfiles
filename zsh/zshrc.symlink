@@ -104,6 +104,11 @@ if [[ $(command -v pyenv-virtualenv-init > /dev/null 2>&1) ]]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# Load z
+if [[ -f `brew --prefix`/etc/profile.d/z.sh ]]; then
+  source "`brew --prefix`/etc/profile.d/z.sh"
+fi 
+
 # Default user for agnoster theme
 export DEFAULT_USER=`whoami`
 
