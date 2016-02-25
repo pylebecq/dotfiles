@@ -13,10 +13,8 @@
     cim             = commit -m '--'
     co              = checkout
     count           = shortlog -sn
-    d               = "!git diff --color $@ | diff-so-fancy"
-    dr              = diff
-    ds              = "!git diff --color --staged $@ | diff-so-fancy"
-    dsr             = diff --staged
+    d               = diff
+    ds              = diff --staged
     fix             = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
     fixup           = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
     last            = log -1 HEAD
@@ -45,7 +43,7 @@
 [core]
     autocrlf        = input
     excludesfile    = ~/.gitignore
-    pager           = less -FRSX
+    pager           = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less -FRSX
     whitespace      = space-before-tab,blank-at-eol,tab-in-indent
 [push]
     default           = simple
