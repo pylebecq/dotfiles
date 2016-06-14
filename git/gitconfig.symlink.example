@@ -43,7 +43,7 @@
 [core]
     autocrlf        = input
     excludesfile    = ~/.gitignore
-    pager           = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less -FRSX
+    pager           = diff-highlight | less -FRSX
     whitespace      = space-before-tab,blank-at-eol,tab-in-indent
 [push]
     default           = simple
@@ -70,3 +70,7 @@
     added = yellow
     changed = green
     untracked = cyan
+[diff]
+	compactionHeuristic = 1
+[interactive]
+	diffFilter = diff-highlight
