@@ -53,7 +53,7 @@ plugins=(git git-extras symfony2 composer brew npm pod)
 
 # User configuration
 
-export PATH="/usr/local/bin:/Users/`whoami`/bin:/Users/`whoami`/.composer/vendor/bin:/Users/`whoami`/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/`whoami`/bin:/Users/`whoami`/.composer/vendor/bin:/Users/`whoami`/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
