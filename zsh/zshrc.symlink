@@ -53,7 +53,7 @@ plugins=(git git-extras symfony2 composer brew npm pod)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/`whoami`/bin:/Users/`whoami`/.composer/vendor/bin:/Users/`whoami`/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Users/`whoami`/bin:/Users/`whoami`/.dotfiles/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,7 +86,6 @@ alias -g gp="| grep -i"
 
 # Load RVM
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
   source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
