@@ -71,6 +71,8 @@
     changed = green
     untracked = cyan
 [diff]
-	compactionHeuristic = 1
+    compactionHeuristic = 1
+[fetch]
+    prune = true
 [interactive]
-	diffFilter = diff-highlight
+    diffFilter = diff-highlight
