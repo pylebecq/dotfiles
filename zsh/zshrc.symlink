@@ -106,6 +106,11 @@ fi
 # Default user for agnoster theme
 export DEFAULT_USER=`whoami`
 
+# Execute iTerm2 shell integration if running iterm
+if [[ -n $ITERM_SESSION_ID && -f "$HOME/.iterm2_shell_integration.zsh" ]]; then
+  source "$HOME/.iterm2_shell_integration.zsh"
+fi
+
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
