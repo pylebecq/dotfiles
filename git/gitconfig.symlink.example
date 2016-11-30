@@ -71,7 +71,7 @@
     changed = green
     untracked = cyan
 [diff]
-    compactionHeuristic = 1
+    indentHeuristic = 1
 [fetch]
     prune = true
 [interactive]
