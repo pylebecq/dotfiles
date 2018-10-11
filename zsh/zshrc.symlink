@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Executes fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
