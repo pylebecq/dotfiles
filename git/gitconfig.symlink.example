@@ -34,6 +34,7 @@
     sq              = "!bash -c 'if [[ $1 ]]; then git ci --squash=$1; else git ci --squash=HEAD; fi;' -"
     squash          = "!bash -c 'if [[ $1 ]]; then git ci --squash=$1; else git ci --squash=HEAD; fi;' -"
     st              = status
+    sw              = switch
     undo            = reset --soft HEAD^
     uncommit        = reset --soft HEAD^
     uncommithard    = reset --hard HEAD^
