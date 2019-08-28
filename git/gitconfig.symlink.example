@@ -22,6 +22,8 @@
     last            = log -1 HEAD
     lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
     lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
+    lgal            = lga --no-merges
+    lgl             = lg --no-merges
     logfull         = log --pretty=fuller --graph --stat -p
     purr            = pull --rebase
     pushf           = push --force-with-lease
