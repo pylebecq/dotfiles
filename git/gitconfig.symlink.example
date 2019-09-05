@@ -80,3 +80,5 @@
     prune = true
 [interactive]
     diffFilter = diff-highlight
+[tag]
+    sort = version:refname
