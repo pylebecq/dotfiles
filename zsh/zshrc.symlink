@@ -83,7 +83,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+###############################################################################
+# Beginning of customization                                                  #
+###############################################################################
+
+# Set EDITOR and VISUAL environment variables
+export EDITOR=vim
+export VISUAL=vim
+
+# Set locale to en_US
+export LC_ALL=en_US.UTF-8
+
+# Set some additional directories for PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
+
+# Set some aliases
 alias dc="docker-compose"
+
+# Alias cat to bat if bat is installed
+if type bat &>/dev/null; then
+  alias cat=bat
+fi
+
+# Execute zsh completions
+if [[ -f "/usr/local/share/zsh-completions" ]]; then
+  FPATH=/usr/local/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Executes zsh autosuggestions
+[ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Executes fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -94,6 +126,11 @@ alias dc="docker-compose"
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
+fi
+
+# Executes starship
+if type starship &>/dev/null; then
+  eval "$(starship init zsh)"
 fi
 
 # Execute iterm2 shell integration
