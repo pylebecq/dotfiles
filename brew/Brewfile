@@ -1,0 +1,117 @@
+###############################################################################
+# Preflight                                                                   #
+###############################################################################
+
+cask_args appdir: "/Applications"
+
+# mas allows to install apps from the Mac App Store
+brew "mas"
+
+###############################################################################
+# App-Store apps using "mas"                                                  #
+###############################################################################
+
+mas "Xcode", id: 497799835
+mas "Amphetamine", id: 937984704
+mas "Moom", id: 419330170
+mas "Unsplash Wallpapers", id: 1284863847
+mas "Irvue", id: 1039633667
+mas "DaisyDisk", id: 411643860
+
+###############################################################################
+# Development, console and server stuff                                       #
+###############################################################################
+
+# Various useful programs
+brew "git"
+brew "tmux"
+brew "curl"
+brew "wget"
+brew "tree"
+brew "htop"
+brew "jq"
+
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+
+# Record and share terminal sessions
+brew "asciinema"
+
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+
+# Command-line fuzzy finder written in Go
+brew "fzf"
+
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
+
+# Modern replacement for ps written by Rust
+brew "procs"
+
+# Show ps output as a tree
+brew "pstree"
+
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
+# Cross-shell prompt for astronauts
+brew "starship"
+
+# Tracks most-used directories to make cd smarter
+brew "z"
+
+# ZSH
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-autosuggestions"
+
+###############################################################################
+# Fonts                                                                       #
+###############################################################################
+
+tap "homebrew/cask-fonts"
+cask "font-jetbrains-mono"
+cask "font-jetbrainsmono-nerd-font"
+
+###############################################################################
+# Casks                                                                       #
+###############################################################################
+
+# ============ Must Have ============
+cask "1password"
+cask "alfred"
+cask "appcleaner"
+cask "discord"
+cask "hiddenbar"
+
+# ============ Browsers ============
+cask "firefox"
+cask "firefox-developer-edition"
+cask "opera"
+cask "opera-gx"
+
+# ============ Development related ============
+cask "visual-studio-code"
+cask "zettlr"
+cask "imageoptim"
+cask "insomnia"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "sf-symbols"
+
+# ============ Screenshots, recordings and sharing ============
+cask "kap"
+cask "droplr"
+
+# ============ Work related ============
+cask "notion"
+cask "slack"
+cask "zoomus"
+
+# ============ Media stuff ============
+cask "vlc"
+cask "airflow"
