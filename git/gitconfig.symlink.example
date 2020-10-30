@@ -1,6 +1,7 @@
 [user]
     email           = %AUTHOR_EMAIL%
     name            = %AUTHOR_NAME%
+    signingKey      = 0x2E137855A7CF016E
 [credentials]
     helper          = %GIT_CREDENTIALS_HELPER%
 [alias]
@@ -82,3 +83,5 @@
     diffFilter = diff-highlight
 [tag]
     sort = version:refname
+[commit]
+    gpgsign = true
