@@ -51,12 +51,6 @@ link_files () {
     success "Linked $1 to $2"
 }
 
-install_fonts () {
-    info 'Installing fonts'
-
-    open ${DOTFILES_ROOT}/fonts/*
-}
-
 install_dotfiles () {
     info 'Installing dotfiles'
 
@@ -125,7 +119,6 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
-install_fonts
 
 echo ''
 echo '  All installed!'

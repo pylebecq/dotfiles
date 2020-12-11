@@ -75,7 +75,11 @@ brew "zsh-autosuggestions"
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
-cask "font-jetbrainsmono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-fira-code"
+cask "font-fira-code-nerd-font"
+cask "font-hack"
+cask "font-hack-nerd-font"
 
 ###############################################################################
 # Casks                                                                       #
