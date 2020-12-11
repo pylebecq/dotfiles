@@ -2,7 +2,7 @@
     email           = %AUTHOR_EMAIL%
     name            = %AUTHOR_NAME%
     signingKey      = 0x2E137855A7CF016E
-[credentials]
+[credential]
     helper          = %GIT_CREDENTIALS_HELPER%
 [alias]
     amend           = commit --amend -C HEAD
