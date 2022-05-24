@@ -109,6 +109,9 @@ export VISUAL=vim
 # Set locale to en_US
 export LC_ALL=en_US.UTF-8
 
+# Make less not paginate when there is less than 1 page
+export LESS="-RFX"
+
 # Set some additional directories for PATH
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
 
@@ -140,6 +143,11 @@ fi
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
+fi
+
+# Executes zoxide
+if type zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
 fi
 
 # Executes starship
