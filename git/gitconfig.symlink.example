@@ -1,7 +1,7 @@
 [user]
     email           = %AUTHOR_EMAIL%
     name            = %AUTHOR_NAME%
-    signingKey      = 0x2E137855A7CF016E
+    signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIIvRWSWRwGdTGUSUO5vvfc0e79BljU5mY0Adcxl2/r5
 [credential]
     helper          = %GIT_CREDENTIALS_HELPER%
 [alias]
@@ -48,8 +48,8 @@
 [core]
     autocrlf        = input
     excludesfile    = ~/.gitignore
-    pager           = diff-highlight | less -FRSX
     whitespace      = space-before-tab,blank-at-eol,tab-in-indent
+    pager           = delta
 [push]
     default           = simple
     recurseSubmodules = check
@@ -77,6 +77,7 @@
     untracked = cyan
 [diff]
     indentHeuristic = 1
+    colorMoved = default
 [fetch]
     prune = true
 [interactive]
@@ -85,3 +86,21 @@
     sort = version:refname
 [commit]
     gpgsign = true
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    line-numbers = true
+    side-by-side = true
+    navigate     = true
+    light = false
+[merge]
+    conflictstyle = diff3
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
