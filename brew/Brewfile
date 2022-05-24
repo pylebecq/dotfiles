@@ -40,6 +40,41 @@ brew "asciinema"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 
+# Clone of cut with added features
+tap "sstadick/hck"
+brew "hck"
+
+# Clone of z
+brew "zoxide"
+
+# Text editor
+brew "amp"
+
+# Another text editor
+tap "helix-editor/helix"
+brew "helix"
+
+# Clone of ps / top
+brew "procs"
+
+# Clone of DaisyDisk in the terminal
+brew "diskonaut"
+
+# Hex viewer
+brew "hexyl"
+
+# Git diff viewer
+brew "git-delta"
+
+# Task runner
+brew "just"
+
+# HTTP Client
+brew "xh"
+
+# DNS Client
+brew "dog"
+
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 
