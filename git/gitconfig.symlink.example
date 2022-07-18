@@ -53,6 +53,7 @@
 [push]
     default           = simple
     recurseSubmodules = check
+    autoSetupRemote   = true
 [rerere]
     enabled         = 1
 [help]
