@@ -31,11 +31,11 @@ brew "tree"
 brew "htop"
 brew "jq"
 
+# Friendly HTTP client
+brew "xh"
+
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
-
-# Record and share terminal sessions
-brew "asciinema"
 
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -53,9 +53,6 @@ brew "amp"
 # Another text editor
 tap "helix-editor/helix"
 brew "helix"
-
-# Clone of ps / top
-brew "procs"
 
 # Clone of DaisyDisk in the terminal
 brew "diskonaut"
@@ -90,14 +87,14 @@ brew "procs"
 # Show ps output as a tree
 brew "pstree"
 
+# Graphical ping utility
+brew "gping"
+
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 
 # Cross-shell prompt for astronauts
 brew "starship"
-
-# Tracks most-used directories to make cd smarter
-brew "z"
 
 # ZSH
 brew "zsh"
@@ -122,35 +119,28 @@ cask "font-hack-nerd-font"
 
 # ============ Must Have ============
 cask "1password"
-cask "alfred"
 cask "appcleaner"
 cask "discord"
 cask "hiddenbar"
+cask "raycast"
 
 # ============ Browsers ============
 cask "firefox"
-cask "firefox-developer-edition"
-cask "opera"
-cask "opera-gx"
 
 # ============ Development related ============
 cask "visual-studio-code"
-cask "zettlr"
-cask "imageoptim"
 cask "insomnia"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "sf-symbols"
 
 # ============ Screenshots, recordings and sharing ============
-cask "kap"
 cask "droplr"
-
-# ============ Work related ============
-cask "notion"
-cask "slack"
-cask "zoomus"
 
 # ============ Media stuff ============
 cask "vlc"
 cask "airflow"
+
+# ============ Gaming ============
+
+cask "steam"
