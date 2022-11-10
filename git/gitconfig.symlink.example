@@ -1,7 +1,7 @@
 [user]
     email           = %AUTHOR_EMAIL%
     name            = %AUTHOR_NAME%
-    signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIIvRWSWRwGdTGUSUO5vvfc0e79BljU5mY0Adcxl2/r5
+    signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtSjMyH2nQU/wQ2+6zvxdIDDBZ5Nr3kfGH/+eW2pxZ+
 [credential]
     helper          = %GIT_CREDENTIALS_HELPER%
 [alias]
@@ -105,4 +105,5 @@
 [gpg]
     format = ssh
 [gpg "ssh"]
+    program            = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
     allowedSignersFile = ~/.ssh/allowed_signers
