@@ -11,9 +11,7 @@ brew "mas"
 # App-Store apps using "mas"                                                  #
 ###############################################################################
 
-mas "Xcode", id: 497799835
 mas "Amphetamine", id: 937984704
-mas "Moom", id: 419330170
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Irvue", id: 1039633667
 mas "DaisyDisk", id: 411643860
@@ -118,7 +116,6 @@ cask "font-hack-nerd-font"
 ###############################################################################
 
 # ============ Must Have ============
-cask "1password"
 cask "appcleaner"
 cask "discord"
 cask "hiddenbar"
