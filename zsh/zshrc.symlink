@@ -126,21 +126,21 @@ if type bat &>/dev/null; then
 fi
 
 # Execute zsh completions
-if [[ -f "/usr/local/share/zsh-completions" ]]; then
-  FPATH=/usr/local/share/zsh-completions:$FPATH
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-completions" ]]; then
+  FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
 
   autoload -Uz compinit
   compinit
 fi
 
 # Executes zsh autosuggestions
-[ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Executes fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Executes asdf
-[ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
+[ -f "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
 
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
