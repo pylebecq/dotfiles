@@ -118,7 +118,7 @@ export LESS="-RFX"
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
 
 # Set some aliases
-alias dc="docker-compose"
+alias dc="docker compose"
 
 # Alias cat to bat if bat is installed
 if type bat &>/dev/null; then
