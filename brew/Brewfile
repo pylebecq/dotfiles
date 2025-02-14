@@ -68,7 +68,7 @@ brew "just"
 brew "xh"
 
 # DNS Client
-brew "dog"
+brew "doggo"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
