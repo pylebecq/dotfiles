@@ -141,8 +141,8 @@ if type fzf &>/dev/null; then
   source <(fzf --zsh)
 fi
 
-# Executes asdf
-[ -f "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh" ] && source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
+# Adds asdf shims to path
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Execute local zshrc file with computer specific configuration
 if [[ -f "$HOME/.zshrc.local" ]]; then
