@@ -127,7 +127,7 @@ cask "firefox"
 # ============ Development related ============
 cask "visual-studio-code"
 cask "insomnia"
-cask "iterm2"
+cask "wezterm"
 cask "jetbrains-toolbox"
 cask "sf-symbols"
 
@@ -139,5 +139,4 @@ cask "vlc"
 cask "airflow"
 
 # ============ Gaming ============
-
 cask "steam"
