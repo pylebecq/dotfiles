@@ -17,7 +17,6 @@
     d               = diff
     ds              = diff --staged
     f               = fetch
-    fa              = fetch --all
     fix             = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
     fixup           = "!bash -c 'if [[ $1 ]]; then git ci --fixup=$1; else git ci --fixup=HEAD; fi;' -"
     last            = log -1 HEAD
@@ -45,21 +44,27 @@
 [branch]
     autosetupmerge  = true
     autosetuprebase = always
+    sort            = -committerdate
 [core]
     autocrlf        = input
     excludesfile    = ~/.gitignore
     whitespace      = space-before-tab,blank-at-eol,tab-in-indent
     pager           = delta
+[pull]
+    rebase = true
 [push]
     default           = simple
     recurseSubmodules = check
     autoSetupRemote   = true
+    followTags        = true
 [rerere]
-    enabled         = 1
+    enabled         = true
+    autoupdate      = true
 [help]
     autocorrect     = 1
 [rebase]
     autostash  = true
+    autosquash = true
     updateRefs = true
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -77,11 +82,20 @@
     added = yellow
     changed = green
     untracked = cyan
+[column]
+    ui = auto
+[init]
+    defaultBranch = main
 [diff]
     indentHeuristic = 1
     colorMoved = default
+    algorithm = histogram
+    mnemonicPrefix = true
+    renames = true
 [fetch]
-    prune = true
+    prune       = true
+    pruneTags   = true
+    all         = true
 [interactive]
     diffFilter = diff-highlight
 [tag]
@@ -101,9 +115,9 @@
     navigate     = true
     light = false
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 [gpg]
     format = ssh
 [gpg "ssh"]
-    program            = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-    allowedSignersFile = ~/.ssh/allowed_signers
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+    allowedSignersFile = ~/.ssh/git/allowed_signers
