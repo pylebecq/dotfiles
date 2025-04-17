@@ -45,6 +45,12 @@ brew "hck"
 # Clone of z
 brew "zoxide"
 
+# Replacement for diff
+brew "riff"
+
+# Replacement for more
+brew "moar"
+
 # Text editor
 brew "amp"
 
